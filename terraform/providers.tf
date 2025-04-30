@@ -1,6 +1,6 @@
 terraform {
 
-  # cloud {
+  # ###cloud {
   #   workspaces {
   #     name = "terraform-eks"
   #   }
