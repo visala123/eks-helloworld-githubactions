@@ -7,8 +7,7 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: us-east-1
-  AWS_REGION1: ap-northeast-2
+  AWS_REGION: ap-northeast-2
   CLUSTER_NAME: eks-creation
 
 jobs:
@@ -71,7 +70,7 @@ jobs:
 
       - name: Update kubeconfig
         run: |
-          aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ${{ env.AWS_REGION1 }}
+          aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }} --region ${{ env.AWS_REGION }}
 
       - name: Deploy ConfigMap
         run: kubectl apply -f kubernetes/html-configmap.yaml
