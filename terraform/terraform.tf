@@ -31,8 +31,4 @@ terraform {
 
   required_version = "~> 1.3"
 }
-backend "s3" {
-    bucket = "terraform-backend-remote-vpc-github-actions"
-    key    = "helloworld/terraform.tfstate"
-    region = "us-east-1"
-    }
+
